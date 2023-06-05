@@ -139,11 +139,10 @@ class PagesController extends Controller
     {
         $q = $request->q;
 
-        $articles = Article::
-                        where("title", "LIKE", "%$q%")
+        $articles = Article::where("public", 1)
+                        ->where("title", "LIKE", "%$q%")
                         ->orwhere("short", "LIKE", "%$q%")
                         ->orwhere("body", "LIKE", "%$q%")
-                        ->where("public", 1)
                         ->get();
 
         return view("search", [
