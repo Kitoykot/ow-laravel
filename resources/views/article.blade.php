@@ -16,7 +16,7 @@
     <h4 class="mt-4">Комментарии:</h4>
 
     @guest
-        <p><a href="{{ route('login') }}">Войдите</a> или <a href="{{ route('register') }}">заригестрируйтесь</a>, чтобы оставлять
+        <p><a href="{{ route('login') }}">Войдите</a> или <a href="{{ route('register') }}">зарегистрируйтесь</a>, чтобы оставлять
             комментарии</p>
     @endguest
 
