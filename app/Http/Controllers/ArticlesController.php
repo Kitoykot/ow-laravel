@@ -124,6 +124,6 @@ class ArticlesController extends Controller
 
         $article->save();
 
-        return redirect()->back();
+        return redirect()->route("one-article", $article->id);
     }
 }
